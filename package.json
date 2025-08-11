@@ -2,12 +2,24 @@
   "name": "playwright-framework-step-by-step",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test --project=chromium",
+    "ci": "npx playwright test --project=chromium --workers=1",
+    "flaky": "npx playwright test --project=chromium --repeat-each=20",
+    "debug": "npx playwright test --project=chromium --debug",
+    "ui": "npx playwright test --project=chromium --ui",
+    "smoke": "npx playwright test --grep @Smoke --project=chromium",
+    "sanity": "npx playwright test --grep @Sanity --project=chromium",
+    "api": "npx playwright test --grep @Api --project=chromium",
+    "regression": "npx playwright test --grep @Regression --project=chromium",
+    "fullTest": "npx playwright test"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
     "@playwright/test": "^1.54.2",
     "@types/dotenv": "^6.1.1",
     "@types/node": "^24.2.1"

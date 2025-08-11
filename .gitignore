@@ -9,3 +9,6 @@ node_modules/
 # Environment files
 .env.*
 !.env.example
+
+# Authentication User file
+userSession.json

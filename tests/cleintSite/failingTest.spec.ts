@@ -5,7 +5,7 @@ test('Failing Sanity Test', { tag: '@Sanity' }, async ({ homePage }) => {
     expect(2).toEqual(3);
 });
 
-test('Failing API Test', { tag: '@Api' }, async ({ homePage }) => {
+test('Failing API Test', { tag: '@Smoke' }, async ({ homePage }) => {
     await homePage.navigateToHomePageUser();
     expect(2).toEqual(3);
 });
